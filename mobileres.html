@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Contact Page</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.logo img {
+    height: 100px;
+}
+
+nav {
+    display: flex;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+.contact-section {
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.contact-header h1 {
+    margin-top: 20px;
+    font-size: 2.5rem;
+}
+
+.contact-header p {
+    margin-bottom: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+.contact-form-container {
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+.about-me {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.about-me img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.about-me h2 {
+    margin-bottom: 10px;
+}
+
+.about-me .signature {
+    font-style: italic;
+}
+
+.posts {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.posts div {
+    width: 45%;
+}
+
+.posts ul {
+    list-style: none;
+}
+
+.posts li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.posts a {
+    text-decoration: none;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer li {
+    margin: 0 10px;
+}
+
+footer a img {
+    width: 30px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo1.jpg" alt="To The New">
+        </div>
+        <nav>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Lifestyle</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section class="contact-section">
+            <img src="image.jpg" alt="City bridge" class="hero-image">
+            <div class="contact-header">
+                <h1>Contact Us</h1>
+                <p>Let's get in touch</p>
+            </div>
+            <div class="contact-form-container">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Mauris elementum accumsan leo vel tempor...</p>
+                <form class="contact-form">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Submit Form</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="about-me">
+            <img src="about.png" alt="About Me">
+            <h2>About Me</h2>
+            <p>Aenean commodo ligula eget dolor. Aenean massa...</p>
+            <p class="signature">Jennifer Carter</p>
+        </section>
+
+        <!-- Recent and Popular Posts Section -->
+        <section class="posts">
+            <div class="recent-posts">
+                <h3>Recent Posts</h3>
+                <ul>
+                    <li><a href="#">Beauty of Nature</a><span>July 22, 2015</span></li>
+                    <li><a href="#">Fashion Model Shoot</a><span>July 22, 2015</span></li>
+                    <li><a href="#">Golden Snow Land</a><span>July 22, 2015</span></li>
+                </ul>
+            </div>
+            <div class="popular-posts">
+                <h3>Popular Posts</h3>
+                <ul>
+                    <li><a href="#">Top 10 Ingredients</a><span>July 22, 2015</span></li>
+                    <li><a href="#">Family Comes First</a><span>July 22, 2015</span></li>
+                    <li><a href="#">Golden Snow Land</a><span>July 22, 2015</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <ul class="social-media">
+                <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="twitter.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="pinterest.png" alt="Pinterest"></a></li>
+                <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
+            </ul>
+            <p>&copy; Copyright LetsBlog Theme Demo - Theme by ThemeGoods</p>
+        </footer>
+    </main>
+
+</body>
+</html>
