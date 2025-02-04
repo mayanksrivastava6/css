@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - To The New</title>
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+     <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+    background-color: #fff;
+    /* padding: px 0; */
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 150px; /* Adjusts the size of the logo as per requirement */
+    height: auto; /* Maintains the aspect ratio of the logo */
+    display: inline-block;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: inline-flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+.main-nav ul li a:hover{
+    color: blue;
+    
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.main-nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.main-nav ul li:hover .dropdown {
+    display: block;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 500px;
+}
+
+.banner-text {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.banner-text h1 {
+    font-size: 48px;
+}
+
+.banner-text p {
+    font-size: 24px;
+}
+
+/* Contact Form */
+.contact-form-section {
+    padding: 50px 0;
+}
+
+.contact-form-section .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form-section label {
+    display: inline;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form-section input[type="text"],
+.contact-form-section input[type="email"],
+.contact-form-section input[type="password"],
+.contact-form-section select,
+.contact-form-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form-section input[type="radio"],
+.contact-form-section input[type="checkbox"] {
+    margin-right: 5px;
+}
+.contact-form-section button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-columns .column {
+    width: 22%;
+}
+
+.footer-columns h4 {
+    margin-bottom: 10px;
+}
+
+.footer-columns ul {
+    list-style: none;
+}
+
+.footer-columns ul li {
+    margin-bottom: 5px;
+}
+
+     </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <img src="logo1.jpg" alt="To The New Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Right Sidebar Post</a></li>
+                            <li><a href="#">Fullwidth Post</a></li>
+                            <li><a href="#">Left Sidebar Post</a></li>
+                            <li><a href="#">Gallery Post</a></li>
+                            <li><a href="#">Video Post</a></li>
+                            <li><a href="#">Music Post</a></li>
+                        </ul></li>
+                    <li><a href="#">Single Posts</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Right Sidebar Post</a></li>
+                            <li><a href="#">Fullwidth Post</a></li>
+                            <li><a href="#">Left Sidebar Post</a></li>
+                            <li><a href="#">Gallery Post</a></li>
+                            <li><a href="#">Video Post</a></li>
+                            <li><a href="#">Music Post</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <img src="image.jpg" alt="Banner Image">
+        <div class="banner-text">
+            <h1>Contact Us</h1>
+            <p>Let's Get in Touch</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla purus vel dolor...</p>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name*</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password*</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label>Gender*</label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                </div>
+                <div class="form-group">
+                    <label for="city">City*</label>
+                    <select id="city" name="city" required>
+                        <option value="">Select City</option>
+                        <option value="new-york">New York</option>
+                        <option value="los-angeles">Los Angeles</option>
+                        <option value="chicago">Chicago</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="hobbies">Hobbies*</label>
+                    <input type="checkbox" id="reading" name="hobbies" value="reading">
+                    <label for="reading">Reading</label>
+                    <input type="checkbox" id="writing" name="hobbies" value="writing">
+                    <label for="writing">Writing</label>
+                    <input type="checkbox" id="music" name="hobbies" value="music">
+                    <label for="music">Music</label>
+                    <input type="checkbox" id="sports" name="hobbies" value="sports">
+                    <label for="sports">Sports</label>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit Form</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="column">
+                    <h4>Recent Posts</h4>
+                    <ul>
+                        <li>Beauty of Nature</li>
+                        <li>Fashion Model Shoot</li>
+                        <li>Golden Snow Land</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4>Popular Posts</h4>
+                    <ul>
+                        <li>Top 10 Ingredients</li>
+                        <li>Family Comes First</li>
+                        <li>Golden Snow Land</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4>Recent Posts</h4>
+                    <ul>
+                        <li>Beauty of Nature</li>
+                        <li>Fashion Model Shoot</li>
+                        <li>Golden Snow Land</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4>Popular Posts</h4>
+                    <ul>
+                        <li>Top 10 Ingredients</li>
+                        <li>Family Comes First</li>
+                        <li>Golden Snow Land</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
