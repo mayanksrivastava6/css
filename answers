@@ -1,0 +1,92 @@
+Q1. What is the use of the float property? Which property is the better alternative to it?**
+
+- Float Property**: The float property in CSS is used to position elements to the left or right within a container, allowing text and inline elements to wrap around them. It was traditionally used for layout purposes, such as creating multi-column layouts before the advent of better layout systems.
+  
+- Better Alternative: The CSS Flexbox and CSS Grid systems are considered better alternatives for layout design. These provide more flexibility and control over the alignment, distribution, and positioning of elements in a more responsive and modern way compared to float.
+
+Q2. Explain the difference between absolute and relative positions.**
+
+Relative Positioning: When an element is positioned relative, it is moved relative to its normal position in the document flow. The space for the element is still reserved as if it were in the normal flow, and it can be shifted using top, right, bottom, or left properties. Other elements around it are not affected by this movement.
+
+Absolute Positioning: When an element is positioned absolute, it is completely removed from the normal document flow. It is positioned relative to its nearest positioned ancestor (i.e., an ancestor with a position other than static) or the initial containing block (viewport) if no such ancestor exists. Other elements will not adjust their positions to account for the space occupied by the absolutely positioned element.
+
+
+Q3. What are the different types of CSS Selectors?**
+
+Some common types of CSS selectors are:
+
+1. Universal Selector (`*`): Selects all elements.
+   css
+   * {
+     margin: 0;
+     padding: 0;
+   }
+   
+
+2. Type Selector: Selects elements by tag name.
+   css
+   p {
+     color: blue;
+   }
+   
+
+3. Class Selector (`.`): Selects elements by class attribute.
+   css
+   .className {
+     font-size: 16px;
+   }
+   
+4. ID Selector (`#`): Selects an element by its ID attribute.
+   css
+   #elementID {
+     background-color: yellow;
+   }
+   
+
+5. Attribute Selector: Selects elements based on attribute values.
+   css
+   [type="text"] {
+     border: 1px solid black;
+   }
+   
+
+6. Descendant Selector: Selects elements that are descendants of a specified element.
+   css
+   div p {
+     color: red;
+   }
+   
+
+7. Child Selector (`>`): Selects direct child elements of a specified element.
+   css
+   div > p {
+     font-weight: bold;
+   }
+   
+
+8. Pseudo-class Selectors: Selects elements based on their state.
+   css
+   a:hover {
+     color: green;
+   }
+   
+
+9. Pseudo-element Selectors: Selects parts of an element.
+   css
+   p::first-letter {
+     font-size: larger;
+   }
+
+
+Q4. How are inline and block elements different from each other?**
+
+- Inline Elements:
+  - Do not start on a new line and only take up as much width as necessary.
+  - Examples include <span>, <a>, <img>, etc.
+  - Inline elements can have padding and margins applied only to the left and right (not top and bottom effectively).
+
+- Block Elements:
+  - Always start on a new line and take up the full width available.
+  - Examples include <div>, <p>, <h1>–<h6>, etc.
+  - Block elements can have padding, margins, and width set on all sides (top, right, bottom, left).
+  

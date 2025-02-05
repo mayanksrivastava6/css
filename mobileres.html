@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Contact Page</title>
-    <link rel="stylesheet" href="/style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
         * {
     margin: 0;
@@ -66,6 +66,8 @@ main {
     width: 100%;
     max-height: 300px;
     object-fit: cover;
+    position: absolute;
+    z-index: -2;
 }
 
 .contact-header h1 {
@@ -203,8 +205,6 @@ footer a img {
             </ul>
         </nav>
     </header>
-
-    <!-- Main Section -->
     <main>
         <section class="contact-section">
             <img src="image.jpg" alt="City bridge" class="hero-image">
@@ -229,7 +229,6 @@ footer a img {
             </div>
         </section>
 
-        <!-- About Me Section -->
         <section class="about-me">
             <img src="about.png" alt="About Me">
             <h2>About Me</h2>
@@ -237,7 +236,6 @@ footer a img {
             <p class="signature">Jennifer Carter</p>
         </section>
 
-        <!-- Recent and Popular Posts Section -->
         <section class="posts">
             <div class="recent-posts">
                 <h3>Recent Posts</h3>
@@ -257,7 +255,6 @@ footer a img {
             </div>
         </section>
 
-        <!-- Footer -->
         <footer>
             <ul class="social-media">
                 <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
