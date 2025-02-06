@@ -1,4 +1,4 @@
-const form = document.getElementById('userForm');
+const form = document.getElementById('myForm');
 const modal = document.getElementById('popupModal');
 const proceedBtn = document.getElementById('proceedBtn');
 const cancelBtn = document.getElementById('cancelBtn');
