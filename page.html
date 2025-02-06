@@ -6,6 +6,7 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <script src="script.js"></script>
   </head>
   <body>
     <header>
@@ -59,7 +60,7 @@
       <div class="content">
         <section class="form-section">
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde possimus saepe voluptatibus quibusdam a iusto quod est sunt distinctio sint asperiores, nostrum, ut molestias, natus suscipit. Consectetur asperiores, sint maiores eum tempora nihil incidunt optio. Reprehenderit saepe quam aut ad.</p>
-          <form action="#" method="post">
+          <form  id="myForm" action="#"  onsubmit="return validateForm()" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required />
 
@@ -98,8 +99,30 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
 
-            <button type="submit">Submit Form</button>
+            <button onclick="displaypopup()" type="submit">Submit Form</button>
           </form>
+          <div id="popupModal" class="modal">
+            <div class="modal-content">
+                <h2>Would you like to proceed with the Submit action?</h2>
+                <button id="proceedBtn" class="proceed">Proceed</button>
+                <button id="cancelBtn" class="cancel">Cancel</button>
+            </div>
+        </div>
+        <script>
+          document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('popupModal').style.display = 'block';
+        });
+
+        document.getElementById('proceedBtn').addEventListener('click', function() {
+            document.getElementById('popupModal').style.display = 'none';
+            document.getElementById('myForm').submit();
+        });
+
+        document.getElementById('cancelBtn').addEventListener('click', function() {
+            document.getElementById('popupModal').style.display = 'none';
+        });
+        </script>
         </section>
 
         <div class="right-sidebar">
@@ -185,5 +208,6 @@
           </ul></div>
         </div>
       </footer>
+      <script src="script.js"></script>
   </body>
 </html>
