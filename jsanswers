@@ -1,5 +1,4 @@
 Q2. What are data types in Javascript? Explain the different types of data types with examples.
-ChatGPT said:
 
 In JavaScript, data types represent the kind of value a variable can hold. JavaScript is a dynamically typed language, meaning you don't have to specify the data type when declaring a variable. The type is determined automatically based on the value assigned to it.
 JavaScript Data Types
@@ -25,18 +24,17 @@ a. Number
 
 Represents numeric values, including both integers and floating-point numbers.
 
-let age = 25;          // Integer
-let price = 199.99;    // Floating point
-console.log(typeof age);  // Output: "number"
-
+let age = 25;          
+let price = 199.99;    
+console.log(typeof age);  
 b. String
 
 Represents textual data enclosed within quotes (single, double, or backticks).
 
 let name = "Alice";
 let greeting = 'Hello, World!';
-let template = `Hello, ${name}!`; // Template literal with embedded expression
-console.log(typeof name);  // Output: "string"
+let template = `Hello, ${name}!`; 
+console.log(typeof name); 
 
 c. Boolean
 
@@ -44,40 +42,38 @@ Represents a logical entity and can have two values: true or false.
 
 let isAdult = true;
 let hasLicense = false;
-console.log(typeof isAdult);  // Output: "boolean"
+console.log(typeof isAdult);  
 
 d. Undefined
 
 A variable that has been declared but not assigned a value is undefined.
-
 let x;
-console.log(x);            // Output: undefined
-console.log(typeof x);     // Output: "undefined"
+console.log(x);            
+console.log(typeof x);  
 
 e. Null
 
 Represents the intentional absence of any object value. It is a primitive type but often used where objects are expected.
 
 let user = null;
-console.log(user);         // Output: null
-console.log(typeof user);  // Output: "object" (this is a known bug in JavaScript)
-
+console.log(user);        
+console.log(typeof user);  
 f. Symbol (ES6)
 
 Represents a unique and immutable value, often used as an identifier for object properties.
 
 let id1 = Symbol('id');
 let id2 = Symbol('id');
-console.log(id1 === id2);  // Output: false (each Symbol is unique)
-console.log(typeof id1);   // Output: "symbol"
+console.log(id1 === id2);
+console.log(typeof id1);   
 
 g. BigInt (ES11)
 
 Used to represent integers that are too large to be represented by the Number type.
 
 let bigInt = BigInt(123456789012345678901234567890);
-console.log(bigInt);       // Output: 123456789012345678901234567890n
-console.log(typeof bigInt);  // Output: "bigint"
+console.log(bigInt);       
+console.log(typeof bigInt);  
 
 2. Non-Primitive (Reference) Data Types
 
@@ -100,17 +96,17 @@ let person = {
   }
 };
 
-console.log(person.name);   // Output: "John"
-person.greet();             // Output: "Hello!"
-console.log(typeof person); // Output: "object"
+console.log(person.name);  
+person.greet();             
+console.log(typeof person); 
 
 b. Array
 
 An array is a special type of object that represents an ordered collection of values (elements). Arrays can store multiple values of different types.
 
 let fruits = ["Apple", "Banana", "Mango"];
-console.log(fruits[1]);        // Output: "Banana"
-console.log(typeof fruits);    // Output: "object"
+console.log(fruits[1]);        
+console.log(typeof fruits);    
 
 c. Function
 
@@ -120,8 +116,8 @@ function greet() {
   return "Hello!";
 }
 
-console.log(greet());          // Output: "Hello!"
-console.log(typeof greet);     // Output: "function"
+console.log(greet());          
+console.log(typeof greet);    
 
 Type Conversion (Type Coercion)
 
@@ -129,126 +125,5 @@ JavaScript allows automatic type conversion (coercion) in some cases, such as ad
 
 let num = 5;
 let text = "10";
-console.log(num + text);  // Output: "510" (Number is coerced to string)
+console.log(num + text);  
 
-Mutable vs Immutable
-
-    Primitive types (like numbers, strings, booleans, etc.) are immutable, meaning their values cannot be changed after they're created.
-    Non-Primitive types (like objects and arrays) are mutable, meaning you can modify their contents.
-
-Summary of Data Types in JavaScript:
-Type	Description	Example
-Number	Represents numeric values, both integers and floats	let num = 42;
-String	Represents textual data	let str = "Hello";
-Boolean	Represents logical values: true or false	let isOpen = false;
-Undefined	A declared variable without a value	let x;
-Null	Represents the absence of value	let user = null;
-Symbol	Unique and immutable values used as object property keys	let sym = Symbol("id");
-BigInt	Represents large integers beyond the safe limit of Number	let bigInt = BigInt(1234567890);
-Object	A collection of key-value pairs	let obj = {name: "Alice"};
-Array	An ordered list of values	let arr = [1, 2, 3];
-Function	A reusable block of code	function greet() { return "Hi"; }
-
-JavaScript provides a diverse range of data types to handle various kinds of information, allowing developers to work with everything from basic numbers and text to complex collections like objects and arrays.
-You said:
-Sorting an array of students on basis of score -- const students = [ { name: "John", score: 85 }, { name: "Bill", score: 92 }, { name: "Natalie", score: 78 }, { name: "David", score: 90 } ];
-ChatGPT said:
-
-To sort an array of students based on their score in ascending or descending order, you can use JavaScript's Array.prototype.sort() method. The sort() method can accept a custom comparison function, which can be used to compare the score of each student object.
-
-Here’s how you can sort the students array in both ascending and descending order based on the score:
-1. Sort in Ascending Order (Lowest to Highest Score)
-
-const students = [
-  { name: "John", score: 85 },
-  { name: "Bill", score: 92 },
-  { name: "Natalie", score: 78 },
-  { name: "David", score: 90 }
-];
-
-// Sort by score in ascending order
-students.sort((a, b) => a.score - b.score);
-
-console.log(students);
-
-Output:
-
-[
-  { name: "Natalie", score: 78 },
-  { name: "John", score: 85 },
-  { name: "David", score: 90 },
-  { name: "Bill", score: 92 }
-]
-
-2. Sort in Descending Order (Highest to Lowest Score)
-
-const students = [
-  { name: "John", score: 85 },
-  { name: "Bill", score: 92 },
-  { name: "Natalie", score: 78 },
-  { name: "David", score: 90 }
-];
-
-// Sort by score in descending order
-students.sort((a, b) => b.score - a.score);
-
-console.log(students);
-
-Output:
-
-[
-  { name: "Bill", score: 92 },
-  { name: "David", score: 90 },
-  { name: "John", score: 85 },
-  { name: "Natalie", score: 78 }
-]
-
-Explanation:
-
-    The sort() method compares two elements at a time using the comparison function (a, b) => a.score - b.score for ascending or (a, b) => b.score - a.score for descending order.
-    For ascending, if a.score is less than b.score, it returns a negative value, indicating that a should come before b. If it's greater, it returns a positive value, placing b before a.
-    For descending, the comparison is reversed by subtracting a.score from b.score.
-
-You said:
-this output is showing when i run my js code: 
-[Done] exited with code=127 in 0.021 seconds
-ChatGPT said:
-
-The exit code 127 typically means that the program couldn't find a command or file. In the context of running JavaScript, this error often occurs when the environment you're using to run your JavaScript doesn't recognize the command (e.g., you're trying to run the file with an incorrect runtime or terminal setup).
-
-Here are some troubleshooting steps:
-1. Ensure You Are Using the Correct Environment
-
-Make sure you're running the JavaScript code in the appropriate environment:
-
-    If you're using Node.js, ensure you have installed Node.js properly, and that you're running the script using node filename.js in your terminal.
-        Run node -v to check if Node.js is installed.
-        If Node.js isn't installed, download it from the official website: Node.js Download.
-
-    If you're trying to run the code directly in a browser, make sure to:
-        Include the <script> tag in your HTML file with the JS code inside.
-        Open the HTML file in the browser, and check the browser's developer console (Ctrl + Shift + J or Cmd + Option + J on macOS) for any errors.
-
-2. Running in a JavaScript File (Node.js)
-
-If you're using Node.js, ensure you're saving your JavaScript code in a file (e.g., app.js), and run it in the terminal like this:
-
-node app.js
-
-If you want to try it in the Node.js REPL (interactive environment):
-
-    Run node in your terminal.
-    Paste the JavaScript code directly into the Node REPL and press Enter.
-
-3. Running in Browser Console
-
-If you're running the code in a browser environment:
-
-    Open your browser and press F12 or Ctrl + Shift + J to open the developer console.
-    Paste the code into the console and hit Enter.
-
-4. Check for File Path Issues
-
-Make sure you are in the correct directory where your JavaScript file is located when running the command. For example, if you're using VS Code or another code editor, ensure you are running the script with the right context or project folder.
-
-By resolving the environment issue, the code should run properly and sort the array as expected.
